@@ -1,0 +1,28 @@
+@charset "UTF-8";
+
+:root {
+    --cor1:  #1E3A8A;
+    --cor2:  #3B82F6;
+    --cor3:  #FFFFFF;
+    --cor4:  #F3F4F6;
+    --cor5:  #374151;
+    
+}
+/* 
+Paleta de cores oficial:
+Azul primário: #1E3A8A
+Azul secundário: #3B82F6
+Fundo: #FFFFFF
+Cinza claro: #F3F4F6
+Cinza escuro (texto): #374151
+Uso:
+Azul: cabeçalhos, botões e links
+Branco: fundo geral
+Cinza: textos, cards e tabelas
+*/
+
+
+*{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: var(--cor3);
+}
