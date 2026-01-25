@@ -4,16 +4,34 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GB Instituições</title>
-    <link rel="stylesheet" href="../static/css/sobre.css">
+
+    <!-- CSS correto Flask -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/sobre.css') }}">
 </head>
+
 <body>
-    <header>
-        
-    </header>
-    <nav>
-        <a href="index.html">Início</a>
-        <a href="sobre.html">Sobre</a>
-        <a href="cursos.html">Cursos</a>
-        <a href="contato.html">Contato</a>
-        <a href="login.html">Login</a>
-    </nav>
+
+<header>
+    <h1>GB Instituições</h1>
+</header>
+
+<nav>
+    <a href="{{ url_for('index') }}">Início</a>
+    <a href="{{ url_for('sobre') }}">Sobre</a>
+    <a href="{{ url_for('cursos') }}">Cursos</a>
+    <a href="{{ url_for('contato') }}">Contato</a>
+    <a href="{{ url_for('login') }}">Login</a>
+</nav>
+
+<main>
+
+<h2>Sobre nós</h2>
+
+<p>
+Somos uma instituição focada em educação tecnológica e formação profissional.
+</p>
+
+</main>
+
+</body>
+</html>

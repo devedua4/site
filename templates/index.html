@@ -4,69 +4,82 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DevAcademy</title>
-    <link rel="stylesheet" href="../static/css/inicio.css">
+
+    <!-- CSS correto Flask -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/inicio.css') }}">
 </head>
 <body>
-    <header>
-        <div class="header-content">
-            <h1>DevAcademy</h1>
-            <nav>
-            <a href="index.html">Início</a>
-            <a href="sobre.html">Sobre</a>
-            <a href="cursos.html">Cursos</a>
-            <a href="contato.html">Contato</a>
-            <a href="login.html">Login</a>
-                </nav>
-        </div>
-    </header>
 
-    <main>
-        <section id="hero">
-            <div class="hero-content">
-                <h2>Bem-vindo à DevAcademy</h2>
-                <p>Educação de excelência para a construção de um futuro brilhante.</p>
-                <a href="#" class="botao">Saiba Mais</a>
-                <a href="#" class="botao">Portal do Aluno</a>
-            </div>
-                <!--Aqui vai a imagem na CSS (Backgroud) -->
-        </section>
+<header>
+    <div class="header-content">
+        <h1>DevAcademy</h1>
 
-        <section id="features">
-            <div class="card">
-                <h3>Ensino de Qualidade</h3>
-                <p>Comprometidos com a excelência pedagógica e a formação integral de nossos estudantes.</p>
-                <a href="#" class="botao">Saiba Mais</a>
-            </div>
-            <div class="card">
-                <h3>Professores Qualificados</h3>
-                <p>Professores experientes e especialistas dedicados a inspirar o conhecimento em diversas áreas.</p>
-                <a href="#" class="botao">Saiba Mais</a>
-            </div>
-            <div class="card">
-                <h3>Infraestrutura Moderna</h3>
-                <p>Ambientes inovadores e salas equipadas, projetados para estimular o aprendizado e a criatividade.</p>
-                <a href="#" class="botao">Saiba Mais</a>
-            </div>
+        <nav>
+            <a href="{{ url_for('index') }}">Início</a>
+            <a href="{{ url_for('sobre') }}">Sobre</a>
+            <a href="{{ url_for('cursos') }}">Cursos</a>
+            <a href="{{ url_for('contato') }}">Contato</a>
+            <a href="{{ url_for('login') }}">Login</a>
+        </nav>
+    </div>
+</header>
 
-        </section>
-        
-        <section id="about">
-            <div class="about-text">
-                <h2>Quem Somos</h2>
-                <p>Somos uma instituição de ensino dedicada a oferecer uma base educacional sólida e humanizada.</p>
-                <p>Preparamos nossos alunos para os desafios do futuro, promovendo um ambiente acolhedor que estimula o desenvolvimento acadêmico, ético e pessoal de cada estudante.</p>
-                <a href="#" class="botao">Saiba Mais</a>
-            </div>
-            <div class="about-image">
-                <!--Aqui vai as imagens na CSS -->
-            </div>
+<main>
 
-        </section>
-    </main>
-    <footer>
-        <p>Projeto criado por <a href="www.linkedin.com/in/gabriel-gonçalves-a5b92b317" target="_blank">Gabriel Gonçalves</a> e <a href="#">Eduardo</a></p>
+<section id="hero">
+    <div class="hero-content">
+        <h2>Bem-vindo à DevAcademy</h2>
+        <p>Educação de excelência para a construção de um futuro brilhante.</p>
+        <a href="{{ url_for('sobre') }}" class="botao">Saiba Mais</a>
+        <a href="{{ url_for('login') }}" class="botao">Portal do Aluno</a>
+    </div>
+</section>
 
-    </footer>
-    
+<section id="features">
+
+    <div class="card">
+        <h3>Ensino de Qualidade</h3>
+        <p>Comprometidos com a excelência pedagógica e a formação integral de nossos estudantes.</p>
+        <a href="{{ url_for('sobre') }}" class="botao">Saiba Mais</a>
+    </div>
+
+    <div class="card">
+        <h3>Professores Qualificados</h3>
+        <p>Professores experientes e especialistas dedicados a inspirar o conhecimento em diversas áreas.</p>
+        <a href="{{ url_for('sobre') }}" class="botao">Saiba Mais</a>
+    </div>
+
+    <div class="card">
+        <h3>Infraestrutura Moderna</h3>
+        <p>Ambientes inovadores e salas equipadas, projetados para estimular o aprendizado e a criatividade.</p>
+        <a href="{{ url_for('sobre') }}" class="botao">Saiba Mais</a>
+    </div>
+
+</section>
+
+<section id="about">
+
+    <div class="about-text">
+        <h2>Quem Somos</h2>
+        <p>Somos uma instituição de ensino dedicada a oferecer uma base educacional sólida e humanizada.</p>
+        <p>Preparamos nossos alunos para os desafios do futuro, promovendo um ambiente acolhedor que estimula o desenvolvimento acadêmico, ético e pessoal de cada estudante.</p>
+        <a href="{{ url_for('sobre') }}" class="botao">Saiba Mais</a>
+    </div>
+
+    <div class="about-image">
+    </div>
+
+</section>
+
+</main>
+
+<footer>
+    <p>
+        Projeto criado por 
+        <a href="https://www.linkedin.com/in/gabriel-gonçalves-a5b92b317" target="_blank">Gabriel Gonçalves</a>
+        e <a href="#">Eduardo</a>
+    </p>
+</footer>
+
 </body>
 </html>
