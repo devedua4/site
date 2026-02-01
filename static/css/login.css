@@ -8,23 +8,20 @@
 }
 body, html {
     background-color: #3B82F6;
-    width: 100vw;
-    height: 100vh;
+     min-height: 100vh;
 }
 
 main {
     position: relative;
     width: 100vw;
     height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 section#login {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
     overflow: hidden;
-
     background-color: white;
     width: 250px;
     height: 500px;
